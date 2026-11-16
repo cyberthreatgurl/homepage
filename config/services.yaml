@@ -1,0 +1,276 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/configs/services/
+
+- Hobbies:
+    - Mesh Dash:
+        href: http://10.0.0.12:8091/
+        siteMonitor: http://10.0.0.12:8091/
+        description: Mesh Dash
+        abbr: MD
+    - Meshtastic Client:
+        href: http://client.meshtastic.org
+        description: Client
+        icon: meshtastic.png
+    - Meshtastic Flasher:
+        href: http://flasher.meshtastic.org
+        description: Flasher
+        icon: meshtastic.png
+    - PSK Reporter:
+        href: https://pskreporter.info/pskmap
+        description: PSK Reporter
+        icon: pskreporter.png
+    - TinyGS:
+        href: https://tinygs.com/station/{{HOMEPAGE_VAR_TINYGS_STATION}}
+        description: TinyGS
+    - MeshMap:
+        href: http://meshmap.net
+        description: MeshMap
+    - Wavelog:
+        href: http://10.0.0.104:8086/user/login
+        siteMonitor: http://10.0.0.104:8086/user/login
+        description: Amateur Radio Logger
+        icon: wavelog.png
+    - QRZ:
+        href: https://www.qrz.com
+        description: QRZ
+        icon: qrz.png
+
+- AI Productivity:
+    - Colab:
+        description: Google Colab
+        abbr: GC
+        href: https://colab.research.google.com/
+        icon: google-colab.svg
+    - Future AI Tools:
+        description: FutureTools.io
+        abbr: FT
+        href: https://www.futuretools.io/
+    - Notebook LM:
+        description: NotebookLM
+        href: https://notebooklm.google.com/
+        icon: notebook-lm.svg
+
+- Infrastructure as Code:
+    - AWX:
+        description: AWX
+        href: http://10.0.0.115:8080
+        siteMonitor: http://10.0.0.115:8080
+        icon: awx.svg
+
+- Services:
+    - Adminer:
+        href: http://10.0.0.12:8080
+        siteMonitor: http://10.0.0.12:8080
+        icon: adminer.svg
+        description: PostgreSQL Server
+    - Gatus:
+        href: http://10.0.0.7:8080
+        siteMonitor: http://10.0.0.7:8080
+        icon: gatus.svg
+        description: 10.0.0.7 Gatus
+        widget:
+          type: gatus
+          url: http://10.0.0.7:8080
+    - Paperless-ng:
+        href: http://10.0.0.12:8000
+        siteMonitor: http://10.0.0.12:8000
+        icon: paperless-ng.svg
+        description: Document Management System
+        widget:
+          type: paperlessngx
+          url: http://10.0.0.12:8000
+          key: {{HOMEPAGE_VAR_PAPERLESS_KEY}}
+    - Pi-Hole:
+        href: http://10.0.0.13/admin/
+        siteMonitor: http://10.0.0.13/admin/
+        icon: pi-hole.svg
+        description: DNS and DHCP Server
+        widget:
+          type: pihole
+          url: http://10.0.0.13
+          version: 6 # required if running v6 or higher, defaults to 5
+          key: {{HOMEPAGE_VAR_PIHOLE_KEY}}
+    - Proxmox:
+        href: https://10.0.0.10:8006/
+        siteMonitor: https://10.0.0.10:8006/
+        description: Proxmox Dashboard
+        icon: proxmox.png
+        # widget:
+        #   type: proxmox
+        #   url: https://10.0.0.10:8006
+        #   username: {{HOMEPAGE_VAR_PROXMOX_USER}} # e.g. api@pam!homepage
+        #   password: {{HOMEPAGE_VAR_PROXMOX_TOKEN}}
+    - Proxmox MenuX:
+        href: http://10.0.0.10:8008
+        siteMonitor: http://10.0.0.10:8008
+        description: ProxMenux Monitor
+        icon: proxmenux.svg
+    - Portainer:
+        href: https://10.0.0.12:9443/#!/home
+        siteMonitor: https://10.0.0.12:9443/
+        description: Portainer
+        icon: portainer.png
+        # widget:
+        #   type: portainer
+        #   url: https://10.0.0.12:9443
+        #   env: 1
+        #   key: {{HOMEPAGE_VAR_PORTAINER_KEY}}
+    - Terramaster 1:
+        href: http://10.0.0.9:8181/tos/index.php
+        siteMonitor: http://10.0.0.9:8181/tos/index.php
+        icon: terramaster.svg
+        description: TNAS F4-210
+        abbr: TM
+    - Terramaster 2:
+        href: http://192.168.1.9:8181/
+        siteMonitor: http://192.168.1.9:8181/
+        icon: terramaster.svg
+        description: TNAS F2-425
+        abbr: TM
+
+- Server Administration:
+    - Yamtrack:
+        icon: yamtrack-light.svg
+        href: https://docker-server.home.arpa:8003/
+        siteMonitor: https://docker-server.home.arpa:8003/
+        description: Yamtrack Media Tracker
+    - Webmin (Dev):
+        icon: webmin.png
+        href: https://dev.home.arpa:10000/
+        siteMonitor: https://dev.home.arpa:10000/
+        description: Ansible Server Management Panel
+    - Webmin (Pi-hole):
+        icon: webmin.png
+        href: https://ns:10000/
+        siteMonitor: https://ns:10000/
+        description: Pi-hole Server Management Panel
+    - Webmin (Proxmox):
+        icon: webmin.png
+        href: https://proxmox-server.home.arpa:10000/
+        siteMonitor: https://proxmox-server.home.arpa:10000/
+        description: Proxmox Server Management Panel
+    - Webmin (Docker):
+        icon: webmin.png
+        href: https://docker-server:10000/
+        siteMonitor: https://docker-server:10000/
+        description: Docker Server Management Panel
+
+- Network Administration:
+    - NetBox:
+        href: https://10.0.0.116/
+        siteMonitor: https://10.0.0.116/
+        icon: netbox.svg
+        description: NetBox Network Inventory Tool
+        # widget:
+        #   type: netbox
+        #   url: https://10.0.0.116
+        #   key: {{HOMEPAGE_VAR_NETBOX_KEY}}
+
+- Learning:
+    - Coursera:
+        href: https://www.coursera.org
+        icon: coursera.png
+        description: Coursera
+    - LinkedIn Learning:
+        href: https://www.linkedin.com/learning/
+        description: LinkedIn Learning
+        icon: linkedin.svg
+        abbr: LL
+
+- Security Operations Center:
+    - Core Router:
+        href: http://192.168.1.1/
+        siteMonitor: http://192.168.1.1/
+        icon: asus-router.svg
+        description: ASUS RT-AX86 Pro Router
+    - IoT Router:
+        href: https://192.168.1.254:8443
+        siteMonitor: https://192.168.1.254:8443
+        icon: asus-router.svg
+        description: ASUS RT-ACRH13 Router
+    - Server Firewall:
+        href: http://192.168.1.2
+        siteMonitor: http://192.168.1.2
+        description: Server Firewall
+        icon: mikrotik-light.svg
+        widget:
+          type: mikrotik
+          url: http://192.168.1.2
+          username: {{HOMEPAGE_VAR_MIKROTIK_USER}}
+          password: {{HOMEPAGE_VAR_MIKROTIK_PASS}}
+    - Core Switch:
+        href: http://192.168.1.6
+        siteMonitor: http://192.168.1.6
+        description: Core Switch
+        icon: cisco.svg
+    - Security Onion:
+        href: http://10.0.0.3
+        siteMonitor: http://10.0.0.3
+        description: Security Onion
+        icon: elastic-kibana.svg
+        abbr: SO
+    - Splunk:
+        href: http://10.0.0.5:8000/
+        siteMonitor: http://10.0.0.5:8000/
+        description: Splunk
+        icon: splunk.svg
+    - LibreNMS:
+        href: http://10.0.0.12:8002/
+        siteMonitor: http://10.0.0.12:8002/
+        description: Network Monitoring
+        icon: librenms.svg
+        # widget:
+        #   type: librenms
+        #   url: http://10.0.0.12:8002
+        #   key: {{HOMEPAGE_VAR_LIBRENMS_KEY}}
+    - Wazuh:
+        href: https://10.0.0.101/
+        siteMonitor: https://10.0.0.101/
+        description: Wazuh
+        icon: wazuh.svg
+        # widget:
+        #   type: wazuh
+        #   url: https://10.0.0.101
+        #   username: {{HOMEPAGE_VAR_WAZUH_USER}}
+        #   password: {{HOMEPAGE_VAR_WAZUH_PASS}}
+    - CyberChef:
+        href: http://10.0.0.12:8005/
+        siteMonitor: http://10.0.0.12:8005/
+        description: Cyber Swiss Army Knife
+        icon: cyberchef.svg
+
+- Smarthome:
+    - Home Assistant:
+        href: http://192.168.50.100:8123
+        siteMonitor: http://192.168.50.100:8123
+        description: HAOS
+        icon: home-assistant.svg
+        # widget:
+        #   type: homeassistant
+        #   url: http://192.168.50.100:8123
+        #   key: {{HOMEPAGE_VAR_HASS_TOKEN}}
+    - JellyFin:
+        href: http://10.0.0.12:8096/web/#/home.html
+        siteMonitor: http://10.0.0.12:8096/
+        description: Home Media Server
+        icon: jellyfin-vue.png
+        # widget:
+        #   type: jellyfin
+        #   url: http://10.0.0.12:8096
+        #   key: {{HOMEPAGE_VAR_JELLYFIN_KEY}}
+    - Jellystat:
+        href: http://10.0.0.12:3000/
+        siteMonitor: http://10.0.0.12:3000/
+        description: Jellystat Media Statistics
+        icon: jellystat.svg
+        # widget:
+        #   type: jellystat
+        #   url: http://10.0.0.12:3000
+        #   key: {{HOMEPAGE_VAR_JELLYSTAT_KEY}}
+
+- Home Security:
+    - Wyze Cameras:
+        href: https://auth.wyze.com/login/
+        description: Wyze Cameras around the house
+        icon: wyze.svg

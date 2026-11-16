@@ -1,0 +1,42 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/configs/bookmarks
+
+- Developer:
+    - Github:
+        - abbr: GH
+          href: https://github.com/cyberthreatgurl
+          icon: github.svg
+- Social:
+    - Reddit:
+        - abbr: RE
+          href: https://reddit.com/
+          icon: reddit.svg
+    - LinkedIn:
+        - href: https://linkedin.com
+          icon: linkedin.svg
+- Entertainment:
+    - Netflix:
+       - abbr: NF
+         href: https://netflix.com
+         icon: netflix.svg
+    - Prime:
+        - abbr: PR
+          href: https://www.amazon.com/gp/video/storefront/
+          icon: amazon-prime.svg
+    - YouTube:
+        - abbr: YT
+          href: https://youtube.com/
+          icon: youtube.svg
+- Utilities and Misc:
+    - Homarr Icons:
+        - href: https://dashboardicons.com/
+          icon: homarr.svg
+    - SelfHosted Dashboard:
+        - href: https://selfh.st/icons/
+          abbr: SH
+          icon: selfh-st.svg
+    - CyberChef:
+        - href: http://10.0.0.12:8005/
+          icon: cyberchef.svg
+          description: CyberChef

@@ -1,0 +1,21 @@
+networks:
+  homepage-net:
+
+services:
+  homepage:
+    image: gethomepage/homepage:latest
+    container_name: homepage
+    ports:
+      - 3080:3000
+    volumes:
+      - ./config:/app/config # Make sure your local config directory exists
+      - ./icons:/app/public/icons
+    environment:
+      HOMEPAGE_ALLOWED_HOSTS: 10.0.0.12:3080    # required, may need port. See gethomepage.dev/installation/#homepage_allowed_hosts
+      PUID: 1000
+      PGID: 1000
+      TZ: America/New_York
+      LOG_LEVEL: debug
+    networks:
+      - homepage-net
+

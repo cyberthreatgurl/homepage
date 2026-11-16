@@ -1,0 +1,134 @@
+
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/configs/services/
+
+- AI Productivity:
+    - Collab:
+        Description: Google Colab
+        abbr: GC
+        href: https://colab.research.google.com/
+#        icon: colab.svg
+    - Future AI Tools:
+        Description: FutureTools.al
+        abbr: FT
+        href: https://www.futuretools.io/
+    - Notebook LM:
+        Description: NotebookLM
+        href: https://notebooklm.google.com/
+        icon: notebook-lm.svg
+
+- Services:
+    - Paperless-ng:
+        href: http://10.0.0.12:8000
+        icon: paperless-ng.svg
+    - Pi-Hole:
+        widget:
+          type: pihole
+          url: http://10.0.0.13
+          version: 6 # required if running v6 or higher, defaults to 5
+          key: metros123  # optional, in v6 can be your password or app password
+        icon: pi-hole.svg
+        href: http://10.0.0.13/admin/
+        description: DNS and DHCP Server
+    - Proxmox:
+        href: https://10.0.0.10:8006/
+        description: Proxmox Dashboard
+        icon: proxmox.png
+    - Portainer:
+        href: https://10.0.0.12:9443/#!/home
+        description: portainer
+        icon: portainer.png
+    - Terramaster:
+        href: http://10.0.0.9:8181/tos/index.php
+        icon: terramaster.svg
+        description: TNAS  F4-210
+        abbr: TM
+
+- Learning:
+    - Coursera:
+        href: http://coursera.org
+        icon: coursera.png
+        description: Coursera
+    - LinkedIn Learning:
+        href: https://www.linkedin.com/learning/?trk=nav_neptune_learning&
+        description: LinkedIn Learning
+        abbr: LL
+- Security Operations Center:
+    - Core Router:
+        href: http://192.168.1.1/
+        icon: asus-router.svg
+        description: ASUS RT-AX55 Router
+    - Security Onion:
+        href: http://10.0.0.3
+        description: Security Onion
+        icon: elastic-kibana.svg
+        abbr: SO
+    - Splunk:
+        href: http://192.168.1.3/
+        description: Splunk
+        icon: splunk.svg
+    - LibreNMS:
+        href: http://10.0.0.12:8002/
+        description: Network Monitoring
+        icon: librenms.svg
+    - Wazuh:
+        href: http://10.0.0.12:3080/
+        description: Wazuh
+        icon: wazuh.svg
+- Smarthome:
+    - Home Assistant:
+        href: http://homeassistant.local:8123/lovelace
+        description: HAOS
+        icon: home-assistant.svg
+    - JellyFin:
+        href: http://10.0.0.12:8096/web/#/home.html
+        description: Home Media Server
+        icon: jellyfin-vue.png
+    - Jellystat:
+        href: http://10.0.0.12:3000/
+        description: Jellytat
+        icon: jellystat.svg
+
+- Home Security:
+    - Wyze Cameras:
+        href: https://auth.wyze.com/login/
+        description: Wyze Cameras around the house
+        icon: wyze.svg
+
+- Hobbies:
+    - Mesh Dash:
+        href: http://10.0.0.12:8091/
+        description: Mesh Dash
+        abbr: MD
+    - Meshtastic Client:
+        href: http://client.meshtastic.org
+        description: Client
+        icon: meshtastic.png
+    - Meshtastic Flasher:
+        href: http://flasher.meshtastic.org
+        description: Flasher
+        icon: meshtastic.png
+    - NEMARC:
+        href: http://www.nemarc.org/index.html
+        description: NEMARC
+    - TinyGS:
+        href: https://tinygs.com/station/AC4MB_TinyGS_Node_1@8023584138
+        description:  TinyGS
+    - MeshMap:
+        href:  http://meshmap.net
+        description: meshmap
+
+#- Hobbies:
+#     - ADS-B Exchange:
+#          icon: https://raw.githubusercontent.com/owennewo-dev/Homepage-config/644f39bd5f1bf67e18981f6d1ec026fc5c8215f0/Icons/flightradar24.svg
+#          widget:
+#            type: iframe
+#            name: Flight Radar 24
+#            src:  https://www.flightradar24.com/37.19,-75.36/9
+#            referrerPolicy: same-origin # optional, no default
+#            allowPolicy: fullscreen # optional, no default
+#            allowFullscreen: false # optional, default: true
+#            loadingStrategy: eager # optional, default: eager
+#            allowScrolling: yes # optional, default: yes
+
