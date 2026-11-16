@@ -90,7 +90,7 @@
           type: pihole
           url: http://10.0.0.13
           version: 6 # required if running v6 or higher, defaults to 5
-          key: {{HOMEPAGE_VAR_PIHOLE_KEY}}
+          key: "{{HOMEPAGE_VAR_PIHOLE_KEY}}" # MUST be named `key:` in Homepage (even for v6 passwords)
     - Proxmox:
         href: https://10.0.0.10:8006/
         siteMonitor: https://10.0.0.10:8006/
